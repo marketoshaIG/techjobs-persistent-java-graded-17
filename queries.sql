@@ -12,7 +12,7 @@
 -- contact_name - VARCHAR(100)
 -- contact_phone - VARCHAR(20)
 -- Part 2
-SELECT name FROM employer WHERE location = 'St. Louis City';
+-- SELECT name FROM employer WHERE location = 'St. Louis City';
 -- Part 3
-
+-- DROP TABLE job;
 -- Part 4
