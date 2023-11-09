@@ -12,12 +12,13 @@ import java.util.List;
 @Table(name="job")
 public class Job extends AbstractEntity {
 
-    @NotNull
+//    @NotNull
     @ManyToOne
     private Employer employer;
-    @NotNull
-    @ManyToMany
+
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Skill> skills;
+
     // Initialize the id and value fields.
     public Job(Employer employer, List<Skill> skills) {
         super();
@@ -25,6 +26,7 @@ public class Job extends AbstractEntity {
         this.skills = skills;
     }
     // Getters and setters.
+
     public Employer getEmployer() {
         return employer;
     }
@@ -33,8 +35,7 @@ public class Job extends AbstractEntity {
     }
     public List<Skill> getSkills() {return skills;}
     public void setSkills(List<Skill> skills) {
-        this.skills = skills;
-    }
+        this.skills = skills;}
 
     public Job() {}
 }

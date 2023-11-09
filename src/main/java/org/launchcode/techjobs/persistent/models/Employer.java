@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Table(name="employer")
 public class Employer extends AbstractEntity {
-    @NotBlank
+    @NotBlank(message = "To continue we need a location")
     @Size(max=100)
     private String location;
     @OneToMany
@@ -25,10 +25,10 @@ public class Employer extends AbstractEntity {
     public void setLocation(String location) {
         this.location = location;
     }
-    public List<Job> getJobs() {return jobs;}
-    public void setJobs(List<Job> jobs) {this.jobs = jobs;}
-    @Override
-    public String toString() {
-        return name + " - " + location;
-    }
+//    public List<Job> getJobs() {return jobs;}
+//    public void setJobs(List<Job> jobs) {this.jobs = jobs;}
+//    @Override
+//    public String toString() {
+//        return name + " - " + location;
+//    }
 }
